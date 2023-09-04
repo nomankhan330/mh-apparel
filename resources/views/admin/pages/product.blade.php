@@ -131,7 +131,7 @@
                 }
             });
         }
-
+    let table='';
         $(document).ready(function() {
 
             $.ajaxSetup({
@@ -140,7 +140,7 @@
                 }
             });
 
-            let table = $('#dt-basic-example').DataTable({
+             table = $('#dt-basic-example').DataTable({
                 processing: true,
                 serverSide: true,
                 responsive: true,
@@ -157,6 +157,7 @@
 
             $('body').on('click', '.editData', function () {
                 let product_id = $(this).data('id');
+
                 $.ajax({
                     url: "{{ route('product_edit') }}",
                     type: "Get",

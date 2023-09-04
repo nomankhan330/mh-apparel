@@ -23,11 +23,9 @@
         </select>
     </div>
 
-
-
     <div class="form-group">
         <label class="form-label" for="description">Description</label>
-        <textarea class="form-control" id="description" name="description" rows="5">{{isset($product->description)}}</textarea>
+        <textarea class="form-control" id="description" name="description" rows="5">{{isset($product->description) ? $product->description : ''}}</textarea>
     </div>
 
 </form>
@@ -39,7 +37,7 @@
         <i class="fal fa-cloud-upload text-muted mb-3"></i> <br>
         <span class="text-uppercase">Drop files here or click to upload.</span>
         <br>
-        <span class="fs-sm text-muted">This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.</span>
+        {{--<span class="fs-sm text-muted">This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.</span>--}}
     </div>
 </form>
 
@@ -52,20 +50,6 @@
 
 <script>
 
-    let table = $('#dt-basic-example').DataTable({
-        processing: true,
-        serverSide: true,
-        responsive: true,
-        destroy : true,
-        ajax: "{{ route('product') }}",
-        columns: [
-            {data: 'id', name: 'id'},
-            {data: 'name', name: 'name'},
-            {data: 'category.name', name: 'category'},
-            /*{data: 'description', name: 'description'},*/
-            {data: 'action', name: 'action', class: 'text-center', orderable: false, searchable: false},
-        ]
-    });
 
     var addsImage = document.getElementById('add_Image').value;
 
