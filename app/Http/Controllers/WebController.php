@@ -38,6 +38,7 @@ class WebController extends Controller
 
     public function product($slug)
     {
+
         $categories = Categories::where('slug', $slug)->first();
         $products = Product::where('category_id', $categories->id)->with('images')->get();
         //dd($products[0]->images[0]->image_url);
@@ -46,6 +47,9 @@ class WebController extends Controller
     public  function product_details($slug)
     {
         //$products = Product::where('slug', $slug)->get();
+        if($slug == 'admin') {
+            return redirect()->route('login');
+        }
 
         $products = Product::with('category')->with('images')->where('slug', $slug)->first();
         //dd($products->images[0]->image_url);

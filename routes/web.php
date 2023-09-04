@@ -25,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 
+
 Route::get('/', [WebController::class, 'index']);
 Route::get('/about-us', [WebController::class, 'aboutus'])->name('about-us');
 Route::get('/clients', [WebController::class, 'clients']);
@@ -38,7 +39,6 @@ Route::get('/shipping-and-return', [WebController::class, 'shippingandreturn']);
 Route::get('/category', [WebController::class, 'category']);
 Route::get('{slug}', [WebController::class, 'product_details'])->name('product-detail');
 Route::get("/product/{slug}", [WebController::class, 'product']);
-
 
 Route::group(['prefix'=>'admin','middleware'=>'guest'], function(){
     Route::get('login', [AuthController::class, 'index'])->name('login');
