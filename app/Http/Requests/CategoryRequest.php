@@ -24,7 +24,7 @@ class CategoryRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'name' => 'required',
+            'name' => 'required|unique:categories,name',
             //'detail' => 'required',
         ];
 
