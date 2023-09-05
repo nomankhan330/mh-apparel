@@ -152,7 +152,7 @@
                                 Secure login
                             </h1>
 
-                            <img src="{{ asset('assets/web/images/logo.gif') }}" alt="SmartAdmin WebApp" aria-roledescription="logo" style="width: 100%">
+                            <img src="{{ asset('assets/web/images/logo-high.png') }}" alt="SmartAdmin WebApp" aria-roledescription="logo" style="width: 100%">
                             <div class="card p-4 rounded-plus bg-faded">
 
                                 <form id="frmlogin" novalidate="" action="{{ route('login.post') }}" method="POST">
