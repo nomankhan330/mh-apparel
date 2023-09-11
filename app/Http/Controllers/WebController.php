@@ -57,7 +57,7 @@ class WebController extends Controller
         $other_products = Product::where('category_id', $products->category->id)->with(['images' => function ($query) {
             $query->take(1); // Limit the number of images to one per product
         }])->where('slug', '!=' , $slug)->get();
-        dd($other_products->images);
+        //dd($other_products->images);
         return view('/web/pages/product-details',['products'=>$products],['other_products'=>$other_products]);
     }
 
