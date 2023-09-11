@@ -51,7 +51,7 @@ class WebController extends Controller
             return redirect()->route('login');
         }
 
-        $products = Product::with('category')->with('images')->where('slug', $slug)->first();
+        $products = Product::with('category')->with('images')->where('slug', $slug)->first()->dd();
         //dd($products->images[0]->image_url);
         //$other_products = Product::where('category_id', $products->category->id)->where('slug', '!=' , $slug)->dd();
 
