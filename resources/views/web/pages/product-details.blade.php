@@ -117,17 +117,7 @@
             </div><!-- end row -->
             <div class="row product-wrap">
 
-                @if(!empty($other_products))
-                    @foreach ($other_products as $other_product)
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="product-item">
-                                <div class="product-img">
-                                    <img src="{{ $other_product->images->image_url }}" alt="product image" class="product__img">
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                @endif
+                
 
                 {{--<div class="col-lg-3 col-sm-6">
                     <div class="product-item">
