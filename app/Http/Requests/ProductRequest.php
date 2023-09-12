@@ -23,11 +23,22 @@ class ProductRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = [
-            'name' => 'required|unique:products,name',
-            'description' => 'required',
-            'category' => 'required|not_in:0',
-        ];
+        if($this->product_id)
+        {
+            $rules = [
+                'name' => 'required|unique:products,name,'.$this->product_id,
+                'description' => 'required',
+                'category' => 'required|not_in:0',
+            ];
+        }
+else
+{
+    $rules = [
+        'name' => 'required|unique:products,name',
+        'description' => 'required',
+        'category' => 'required|not_in:0',
+    ];
+}
 
        /* if (!($this->request->get('category_id'))) {
             $rules['image'] = 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048';

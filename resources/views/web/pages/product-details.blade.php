@@ -119,15 +119,15 @@
 
 
                 @foreach ($other_products as $other_product)
-
+                        @if(isset($other_product->images[0]->image_url))
                         <div class="col-lg-3 col-sm-6">
                             <div class="product-item">
                                 <div class="product-img">
-                                    <img src="{{ $other_product->images[0]->image_url }}" alt="product image" class="product__img">
+                                    <img src="{{  $other_product->images[0]->image_url }}" alt="product image" class="product__img">
                                 </div>
                             </div>
                         </div>
-
+                        @endif
                 @endforeach
 
 
