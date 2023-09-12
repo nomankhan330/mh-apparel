@@ -123,8 +123,14 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="product-item">
                                 <div class="product-img">
-                                    <a href="{{route('product-detail', ['slug' => "$product->slug"])}}">
-                                    <img src="{{  $other_product->images[0]->image_url }}" alt="product image" class="product__img">
+                                    <a href="{{route('product-detail', ['slug' => "$other_product->slug"])}}">
+                                        <img src="{{  $other_product->images[0]->image_url }}" alt="product image" class="product__img">
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <h3 class="pro__title">
+                                        <h4>{{ $other_product->name }}</h4>
+                                    </h3>
                                 </div>
                             </div>
                         </div>
