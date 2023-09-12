@@ -129,7 +129,7 @@
                                 </div>
                                 <div class="product-content">
                                     <h3 class="pro__title">
-                                        <h4>{{ $other_product->name }}</h4>
+                                        <a href="{{route('product-detail', ['slug' => "$other_product->slug"])}}"><h4>{{ $other_product->name }}</h4></a>
                                     </h3>
                                 </div>
                             </div>
