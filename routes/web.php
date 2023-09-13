@@ -38,7 +38,7 @@ Route::get('/terms-and-condition', [WebController::class, 'termsandcondition']);
 Route::get('/shipping-and-return', [WebController::class, 'shippingandreturn']);
 Route::get('/category', [WebController::class, 'category']);
 Route::get('{slug}', [WebController::class, 'product_details'])->name('product-detail');
-Route::get("/product/{slug}", [WebController::class, 'product']);
+Route::get("/product/{slug}", [WebController::class, 'product'])->name('product-detail');
 
 Route::group(['prefix'=>'admin','middleware'=>'guest'], function(){
     Route::get('login', [AuthController::class, 'index'])->name('login');
