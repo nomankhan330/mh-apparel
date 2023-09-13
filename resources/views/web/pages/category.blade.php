@@ -59,7 +59,7 @@
                             <img src="{{ asset('assets/web/images/categories/'.$category->image ) }}" alt="{{ $category->name }}">
                         </div>
                         <div class="team-titles">
-                            <h3 class="team__title"><a href="{{route('product-detail',$category->slug )}}">{{ $category->name }}</a></h3>
+                            <h3 class="team__title"><a href="{{route('product-list',$category->slug )}}">{{ $category->name }}</a></h3>
                         </div>
                     </div>
                 </div>
